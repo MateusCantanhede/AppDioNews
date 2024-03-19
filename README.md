@@ -16,7 +16,7 @@ O AppDioNews é um aplicativo de notícias inovador para iOS que oferece aos usu
 
 ## Instalação
 
-O AppDioNews está disponível na App Store. Você pode instalá-lo diretamente no seu dispositivo iOS a partir do seguinte link: `[AppDioNews na App Store](#)`.
+clone o repositorio: `git clone https://github.com/MateusCantanhede/AppDioNews.git`.
 
 ## Uso
 

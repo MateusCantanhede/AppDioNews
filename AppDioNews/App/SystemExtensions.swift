@@ -23,7 +23,7 @@ extension Date{
 }
 
 extension UIImageView{
-    func downloaded(from url:URL,contentMode mode: ContentMode = .scaleAspectFit){
+    func downloaded(from url:URL,contentMode mode: ContentMode = .scaleAspectFill){
         contentMode = mode
         URLSession.shared.dataTask(with: url){
             data,response,error in
@@ -45,9 +45,12 @@ extension UIImageView{
             }
         }.resume()
     }
-    func LoadImage(from link:String?, contentMode mode:ContentMode = .scaleAspectFit){
+    func LoadImage(from link:String?, contentMode mode:ContentMode = .scaleAspectFill){
         
-        guard let link = link, let url = URL(string: link) else{return}
+        guard let link = link, let url = URL(string: link) else{
+            self.image = UIImage(named: "NoImage.png")
+            return
+        }
         downloaded(from: url, contentMode: contentMode)
         let image = UIImage(named:"NoImage.png")
         if image == nil {
